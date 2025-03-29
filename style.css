@@ -33,10 +33,25 @@ body {
   .aguacate img {
     width: 200px;
     margin-bottom: 1rem;
+    animation: heartbeat 2s infinite;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .aguacate img:hover {
+    transform: scale(1.1) rotate(2deg);
   }
   
   .aguacate p {
     font-size: 1rem;
     color: #555;
+  }
+  
+  /* Animación latido */
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.05); }
+    40% { transform: scale(0.95); }
+    60% { transform: scale(1.05); }
+    100% { transform: scale(1); }
   }
   
